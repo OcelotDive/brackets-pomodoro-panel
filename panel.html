@@ -1,0 +1,51 @@
+<div class="pomodoro-panel bottom-panel" id="pomodoroPanel">
+
+    <button class="pomodoro-closeButton" type="button">x</button>
+    
+    <div class="pomodoro-container">
+        <div class="pomodoro-timer">
+        </div>
+        
+        <div class="pomodoro-radio-group">
+            <div class="pomodoro-radio-container">
+                <input class="pomodoro-radio" type="radio" id="pomodoro-selectorOne" name="pomodoro-selector" value="1500000" checked="checked"><label class="pomodoro-label" for="pomodoro-selectorOne">1 Pomodoro(25mins)<div class="pomodoro-radio-check"></div></label>
+            </div>
+
+            <div class="pomodoro-radio-container">
+                <input class="pomodoro-radio" type="radio" id="pomodoro-selectorTwo" name="pomodoro-selector" value="3000000"><label class="pomodoro-label" for="pomodoro-selectorTwo">2 Pomodoro(50mins)<div class="pomodoro-radio-check"></div></label>
+            </div>
+
+            <div class="pomodoro-radio-container">
+                <input class="pomodoro-radio" type="radio" id="pomodoro-selectorThree" name="pomodoro-selector" value="4500000"><label class="pomodoro-label" for="pomodoro-selectorThree">3 Pomodoro(75mins)<div class="pomodoro-radio-check"></div></label>
+            </div>
+
+            <div class="pomodoro-radio-container">
+                <input class="pomodoro-radio" type="radio" id="pomodoro-selectorFour" name="pomodoro-selector" value="6000000"><label class="pomodoro-label" for="pomodoro-selectorFour">4 Pomodoro(100mins)<div class="pomodoro-radio-check"></div></label>
+            </div>
+
+            <div class="pomodoro-radio-container">
+                <input class="pomodoro-radio" type="radio" id="pomodoro-selectorFive" name="pomodoro-selector" value="7500000"><label class="pomodoro-label" for="pomodoro-selectorFive">5 Pomodoro(125mins)<div class="pomodoro-radio-check"></div></label>
+            </div>
+        </div>
+
+        <button class="pomodoro-start-pause" type="button">START/PAUSE</button>
+    </div>
+
+    <h4 class="pomodoro-panelTitle">POMODORO PANEL</h4>
+    <div class="pomodoro-input-container">
+        <input class="pomodoro-inputField" type="text" name="listItem" placeholder="ADD TASK" value="">
+        <button class="pomodoro-addTaskButton" type="button">ADD</button>
+    </div>
+    <div class="pomodoro-slide-container">
+        <input type="range" min="0" max="12" value="0" class="pomodoro-break-slider" id="myRange">
+        <label class="pomodoro-mins-label"></label>
+        <div class="pomodoro-mode-container">
+            <label class="pomodoro-mode-label">Mode:</label>
+            <label class="pomodoro-status-label">Paused</label>
+        </div>
+    </div>
+    
+    <ol class="pomodoro-toDoList">
+    </ol>
+    
+</div>

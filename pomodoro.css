@@ -1,0 +1,347 @@
+.pomodoro-panel {
+    background: grey;
+    position: relative;
+    width: 100%;
+    overflow-x: scroll;
+}
+
+.pomodoro-container {
+    position: absolute;
+    top: 0;
+    left: 38%;
+    width: 58%;
+    height: 100px;
+}
+
+@media only screen and (max-width: 730px) {
+
+    .pomodoro-timer,
+    .pomodoro-start-pause,
+    .pomodoro-break-slider,
+    .pomodoro-mins-label,
+    .pomodoro-mode-label,
+    .pomodoro-status-label {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 780px) {
+
+    .pomodoro-radio-container {
+        display: none;
+    }
+}
+
+.pomodoro-closeButton {
+    position: absolute;
+    top: 10px;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    line-height: 0;
+    right: 0.5%;
+    background-color: #333;
+    color: #fff;
+    z-index: 99;
+}
+
+.pomodoro-panelTitle {
+    position: absolute;
+    top: 2%;
+    left: 0.2%;
+    display: inline-block;
+    color: #fff;
+    text-align: center;
+    margin-left: 5px;
+    text-shadow: 2px 2px 2px black,
+    1px 1px 1px white;
+    white-space: nowrap;
+}
+
+.pomodoro-timer {
+    position: absolute;
+    width: 170px;
+    height: 94px;
+    left: 1%;
+    top: 10px;
+    margin-right: 5%;
+}
+
+.pomodoro-span {
+    width: 50px;
+    height: 50px;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+    border-radius: 10px;
+    font-size: 30px;
+    box-shadow: 1px 1px 1px #fff, 2px 2px 2px #aaa;
+}
+
+.pomodoro-span.spinSpan {
+    animation: spin 0.7s ease forwards;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotateX(0deg)
+    }
+
+    100% {
+        transform: rotateX(360deg)
+    }
+}
+
+.pomodoro-countDownRed {
+    color: #FF0000;
+}
+
+.pomodoro-radio-group {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-flow: wrap;
+    right: 0%;
+    top: 10%;
+    height: 80px;
+    width: 60%;
+    overflow-y: scroll;
+}
+
+.pomodoro-label {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    color: #aaa;
+    white-space: nowrap;
+}
+
+.pomodoro-radio {
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    visibility: hidden;
+}
+
+.pomodoro-radio-check {
+    display: block;
+    position: absolute;
+    border: 3px solid #aaa;
+    border-radius: 100%;
+    height: 10px;
+    width: 10px;
+    top: 50%;
+    left: 44%;
+    transition: border .25s linear;
+    -webkit-transition: border .25s linear;
+}
+
+.pomodoro-radio-check::before {
+    display: block;
+    position: absolute;
+    content: '';
+    border-radius: 100%;
+    height: 8px;
+    width: 8px;
+    top: 1px;
+    left: 1px;
+    transition: background 0.25s linear;
+    -webkit-transition: background 0.25s linear;
+}
+
+.pomodoro-radio:checked ~ .pomodoro-label > .pomodoro-radio-check {
+    border: 3px solid #4CAF50;
+}
+
+.pomodoro-radio:checked ~ .pomodoro-label > .pomodoro-radio-check::before {
+    background-color: #4CAF50;
+}
+
+.pomodoro-radio:checked ~ label {
+    color: #0DFF92;
+}
+
+.pomodoro-label:hover {
+    color: #fff;
+}
+
+.pomodoro-radio-container:nth-of-type(1) {
+    position: relative;
+    width: 140px;
+    height: 40px;
+    background: transparent;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 10%;
+}
+
+.pomodoro-radio-container:nth-of-type(2) {
+    position: relative;
+    width: 140px;
+    height: 40px;
+    background: transparent;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 10%;
+}
+
+.pomodoro-radio-container:nth-of-type(3) {
+    position: relative;
+    width: 140px;
+    height: 40px;
+    background: transparent;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 10%;
+}
+
+.pomodoro-radio-container:nth-of-type(4) {
+    position: relative;
+    width: 140px;
+    height: 40px;
+    background: transparent;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 10%;
+}
+
+.pomodoro-radio-container:nth-of-type(5) {
+    position: relative;
+    width: 140px;
+    height: 40px;
+    background: transparent;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 10%;
+}
+
+
+.pomodoro-start-pause {
+    position: absolute;
+    top: 74%;
+    left: 1.5%;
+    width: 162px;
+    height: 20px;
+    padding: 1px 6px 1px 6px;
+    background-color: #4CAF50;
+    border: none;
+    color: #fff;
+    white-space: nowrap;
+    font-size: 10px;
+}
+
+.pomodoro-toDoList {
+    position: absolute;
+    top: 57%;
+    width: 100%;
+    height: 42%;
+    margin: 0;
+    font-size 14px;
+    overflow-y: auto;
+    white-space: nowrap;
+    border: solid 2px #000;
+    border-top: solid 1px;
+}
+
+.pomodoro-toDoList > li:nth-child(odd) {
+    background-color: #333;
+}
+
+.pomodoro-listItem {
+    height: 30px;
+    text-indent: 20px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.pomodoro-input-container {
+    position: absolute;
+    top: 20%;
+    width: 13%;
+    margin-left: 0.3%;
+    min-width: 100px;
+    margin-right: 0;
+    height: 70px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: space-around;
+}
+
+.pomodoro-inputField {
+    width: 100%;
+    background-color: #2F4F4F;
+}
+
+.pomodoro-addTaskButton {
+    width: 100%;
+    padding: 3px 10px 3px 10px;
+    background-color: #4CAF50;
+    border: none;
+    color: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.pomodoro-removeButton {
+    background-color: #dc0c0c;
+    color: #fff;
+    border: none;
+    float: right;
+    margin-left: 10px;
+}
+
+.pomodoro-slide-container {
+    position: absolute;
+    top: 15%;
+    left: 21%;
+    width: 12%;
+    height: 31%;
+}
+
+.pomodoro-break-slider {
+    width: 100%;
+    height: 25px;
+    background: #aaa;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.pomodoro-removeButton:after {
+    content: "DONE";
+}
+
+.pomodoro-mins-label {
+    color: #aaa;
+    font-size: 16px;
+    white-space: nowrap;
+    width: 100%;
+    text-align: center;
+}
+
+.pomodoro-mode-container {
+    position: absolute;
+    top: 76%;
+    left: 5%;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.pomodoro-mode-label {
+    color: #aaa;
+    margin-right: 5px;
+    white-space: nowrap;
+}
+
+.pomodoro-status-label {
+    white-space: nowrap;
+}
