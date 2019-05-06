@@ -12,6 +12,7 @@ This is a lightweight easy to use pomodoro timer and task list panel which works
 Download and install from Brackets extension manager or download the zip here and drag into Brackets extension manager.
 
 ### Usage
+After installing the pomodoro panel can be activated under the view tab or by pressing Ctrl-Shift-P.
 Tasks or code snippets for future use can be added to the task list simply by typing in the input field and clicking the add button.
 The timer can be set to 25min, 50min 75min 100min or 125min which are standard pomodoro times. Use the slider to select the desired
 number of break minutes (in 5 min intervals) and click the start button.
