@@ -9,27 +9,18 @@
     position: absolute;
     top: 0;
     left: 38%;
-    width: 58%;
-    height: 100px;
+    width: 60%;
+    height: 105px;
+    overflow: hidden;
 }
 
-@media only screen and (max-width: 730px) {
-
-    .pomodoro-timer,
-    .pomodoro-start-pause,
-    .pomodoro-break-slider,
-    .pomodoro-mins-label,
-    .pomodoro-mode-label,
-    .pomodoro-status-label {
-        display: none;
-    }
-}
-
-@media only screen and (max-width: 780px) {
-
-    .pomodoro-radio-container {
-        display: none;
-    }
+.pomodoro-extend-message {
+    position: absolute;
+    left: 40%;
+    top: 20%;
+    font-size: 16px;
+    display: none;
+    white-space: nowrap;   
 }
 
 .pomodoro-closeButton {
@@ -106,10 +97,10 @@
     flex-direction: row;
     justify-content: center;
     flex-flow: wrap;
-    right: 0%;
+    right: calc(-1.25% - 10px);
     top: 10%;
-    height: 80px;
-    width: 60%;
+    height: 100px;
+    width: 65%;
     overflow-y: scroll;
 }
 
@@ -178,6 +169,10 @@
     cursor: pointer;
     text-align: center;
     border-radius: 10%;
+    background: #333;
+    margin-right: 3px;
+    margin-bottom: 2px;
+    border: solid 1px #aaa;
 }
 
 .pomodoro-radio-container:nth-of-type(2) {
@@ -188,6 +183,10 @@
     cursor: pointer;
     text-align: center;
     border-radius: 10%;
+    background: #333;
+    margin-right: 3px;
+    margin-bottom: 2px;
+    border: solid 1px #aaa;
 }
 
 .pomodoro-radio-container:nth-of-type(3) {
@@ -198,6 +197,10 @@
     cursor: pointer;
     text-align: center;
     border-radius: 10%;
+    background: #333;
+    margin-right: 3px;
+    margin-bottom: 2px;
+    border: solid 1px #aaa;
 }
 
 .pomodoro-radio-container:nth-of-type(4) {
@@ -208,6 +211,10 @@
     cursor: pointer;
     text-align: center;
     border-radius: 10%;
+    background: #333;
+    margin-right: 3px;
+    margin-bottom: 2px;
+    border: solid 1px #aaa;
 }
 
 .pomodoro-radio-container:nth-of-type(5) {
@@ -218,6 +225,9 @@
     cursor: pointer;
     text-align: center;
     border-radius: 10%;
+    background: #333;
+    margin-bottom: 2px;
+    border: solid 1px #aaa;
 }
 
 
@@ -233,6 +243,11 @@
     color: #fff;
     white-space: nowrap;
     font-size: 10px;
+    border: 1px solid transparent;
+}
+
+.pomodoro-start-pause:hover, .pomodoro-addTaskButton:hover {
+    opacity: 0.8;
 }
 
 .pomodoro-toDoList {
@@ -272,6 +287,7 @@
     display: flex;
     flex-direction: column;
     align-items: space-around;
+    z-index: 9;
 }
 
 .pomodoro-inputField {
@@ -344,4 +360,28 @@
 
 .pomodoro-status-label {
     white-space: nowrap;
+}
+
+@media only screen and (max-width: 740px) {
+
+    .pomodoro-timer,
+    .pomodoro-start-pause,
+    .pomodoro-break-slider,
+    .pomodoro-mins-label,
+    .pomodoro-mode-label,
+    .pomodoro-status-label {
+        display: none;
+    }
+    .pomodoro-extend-message {
+        display: block;
+    }
+    
+    
+}
+
+@media only screen and (max-width: 840px) {
+
+    .pomodoro-radio-container, .pomodoro-radio-group {
+        display: none;
+    }
 }

@@ -15,7 +15,20 @@ define(function (require, exports, module) {
     var timerPause = true;
     var onBreak = false;
     var sliderValue;
-
+    
+    var KEY_BINDINGS = [
+        {
+            key: "Ctrl-Shift-P",
+            platform: "win"
+        },
+        {
+            key: "Ctrl-Shift-P",
+            platform: "mac"
+        },
+        {
+            key: "Ctrl-Shift-P"
+        }
+    ];
     
     function handleCurrentMode() {
       var statusLabel = document.querySelector(".pomodoro-status-label");
@@ -50,7 +63,7 @@ define(function (require, exports, module) {
 
     function handleAddTask() {
         var textField = document.querySelector(".pomodoro-inputField");
-        textField.setAttribute("placeholder", "ADD TASK OR CODE SNIPPET");
+        textField.setAttribute("placeholder", "ADD TASK");
         if (textField.value !== "") {
             var taskList = document.querySelector(".pomodoro-toDoList");
             var listItem = document.createElement("li");
@@ -207,10 +220,10 @@ define(function (require, exports, module) {
     AppInit.appReady(function () {
         ExtensionUtils.loadStyleSheet(module, "pomodoro.css");
         CommandManager.register("Pomodoro Panel", POMODORO_TIMER, handleMenuClick);
-
+        
         var menu = Menus.getMenu(Menus.AppMenuBar.VIEW_MENU);
-        menu.addMenuItem(POMODORO_TIMER);
-
+        menu.addMenuItem(POMODORO_TIMER, KEY_BINDINGS);
+    
         panel = PanelManager.createBottomPanel(POMODORO_TIMER, $(panelHtml), 200);
 
         closeButton = document.querySelector(".pomodoro-closeButton");
